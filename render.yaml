@@ -2,7 +2,6 @@ services:
   - type: web
     name: helpdesk-api
     runtime: node
-    rootDir: asses-nest-app
     buildCommand: npm install && npm run build:prod
     startCommand: npm run start:prod
     plan: free
