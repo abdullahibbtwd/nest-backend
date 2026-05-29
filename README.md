@@ -114,5 +114,3 @@ This monorepo includes **`render.yaml`** at the repo root. Connect the GitHub re
 npm run build:prod
 npm run start:prod  # runs migrations automatically
 ```
-
-See [DEPLOY.md](../DEPLOY.md) for Render, Railway, and Vercel steps.
