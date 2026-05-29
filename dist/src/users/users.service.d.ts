@@ -7,32 +7,32 @@ export declare class UsersService {
     constructor(prisma: PrismaService);
     findAll(user: AuthUser): import("../../generated/prisma/internal/prismaNamespace").PrismaPromise<{
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
         email: string;
         role: import("../../generated/prisma/enums").Role;
         companyId: string | null;
     }[]>;
     findOne(id: string, user: AuthUser): Promise<{
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
         email: string;
         role: import("../../generated/prisma/enums").Role;
         companyId: string | null;
     }>;
     create(dto: CreateUserDto, user: AuthUser): Promise<{
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
         email: string;
         role: import("../../generated/prisma/enums").Role;
         companyId: string | null;
     }>;
     update(id: string, dto: UpdateUserDto, user: AuthUser): Promise<{
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
         email: string;
         role: import("../../generated/prisma/enums").Role;
         companyId: string | null;

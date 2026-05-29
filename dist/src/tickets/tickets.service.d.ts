@@ -15,8 +15,8 @@ export declare class TicketsService {
         comments: ({
             author: {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 email: string;
                 role: import("../../generated/prisma/enums").Role;
                 companyId: string | null;
@@ -37,16 +37,16 @@ export declare class TicketsService {
         };
         createdBy: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;
         };
         assignedTo: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;
@@ -73,16 +73,16 @@ export declare class TicketsService {
         };
         createdBy: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;
         };
         assignedTo: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;
@@ -111,16 +111,16 @@ export declare class TicketsService {
         };
         createdBy: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;
         };
         assignedTo: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;
@@ -147,16 +147,16 @@ export declare class TicketsService {
         };
         createdBy: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;
         };
         assignedTo: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;

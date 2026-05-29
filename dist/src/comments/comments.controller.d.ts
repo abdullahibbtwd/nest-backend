@@ -7,8 +7,8 @@ export declare class CommentsController {
     findByTicket(ticketId: string, user: AuthUser): Promise<({
         author: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;
@@ -23,8 +23,8 @@ export declare class CommentsController {
     create(ticketId: string, dto: CreateCommentDto, user: AuthUser): Promise<{
         author: {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             email: string;
             role: import("../../generated/prisma/enums").Role;
             companyId: string | null;

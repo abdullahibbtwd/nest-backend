@@ -5,12 +5,12 @@ export declare class AuditService {
     constructor(prisma: PrismaService);
     log(userId: string, action: string, entity: string, entityId: string, metadata?: Prisma.InputJsonValue): Prisma.Prisma__AuditLogClient<{
         id: string;
+        createdAt: Date;
+        userId: string;
         action: string;
         entity: string;
         entityId: string;
         metadata: import("@prisma/client/runtime/client").JsonValue | null;
-        createdAt: Date;
-        userId: string;
     }, never, import("@prisma/client/runtime/client").DefaultArgs, {
         omit: Prisma.GlobalOmitConfig | undefined;
     }>;
@@ -23,11 +23,11 @@ export declare class AuditService {
         };
     } & {
         id: string;
+        createdAt: Date;
+        userId: string;
         action: string;
         entity: string;
         entityId: string;
         metadata: import("@prisma/client/runtime/client").JsonValue | null;
-        createdAt: Date;
-        userId: string;
     })[]>;
 }

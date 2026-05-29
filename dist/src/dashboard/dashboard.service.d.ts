@@ -27,8 +27,8 @@ export declare class DashboardService {
             count: number;
             agent: {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 email: string;
                 role: import("../../generated/prisma/enums").Role;
                 companyId: string | null;
@@ -37,16 +37,16 @@ export declare class DashboardService {
         recentActivity: ({
             createdBy: {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 email: string;
                 role: import("../../generated/prisma/enums").Role;
                 companyId: string | null;
             };
             assignedTo: {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 email: string;
                 role: import("../../generated/prisma/enums").Role;
                 companyId: string | null;

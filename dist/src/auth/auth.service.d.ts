@@ -33,8 +33,8 @@ export declare class AuthService {
     private buildAuthResponse;
     getProfile(userId: string): Promise<{
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
         email: string;
         role: import("../../generated/prisma/enums").Role;
         companyId: string | null;

@@ -8,20 +8,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HttpExceptionFilter = void 0;
 const common_1 = require("@nestjs/common");
+const structured_logger_1 = require("../logging/structured-logger");
 let HttpExceptionFilter = class HttpExceptionFilter {
     catch(exception, host) {
         const ctx = host.switchToHttp();
         const response = ctx.getResponse();
+        const request = ctx.getRequest();
         const status = exception instanceof common_1.HttpException
             ? exception.getStatus()
             : common_1.HttpStatus.INTERNAL_SERVER_ERROR;
         const message = exception instanceof common_1.HttpException
             ? exception.getResponse()
             : 'Internal server error';
+        (0, structured_logger_1.logStructured)('Exception', `${request.method} ${request.url}`, status >= 500 ? 'error' : 'warn', {
+            statusCode: status,
+            origin: request.headers.origin ?? null,
+            message,
+            stack: status >= 500 && exception instanceof Error
+                ? exception.stack
+                : undefined,
+        });
         response.status(status).json({
             statusCode: status,
             message,
             timestamp: new Date().toISOString(),
+            path: request.url,
         });
     }
 };

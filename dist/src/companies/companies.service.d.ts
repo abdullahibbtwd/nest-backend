@@ -16,26 +16,26 @@ export declare class CompaniesService {
         };
     } & {
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
     }) | null, null, import("@prisma/client/runtime/client").DefaultArgs, {
         omit: import("../../generated/prisma/internal/prismaNamespace").GlobalOmitConfig | undefined;
     }> | null;
     findOne(id: string, user: AuthUser): Promise<{
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
     }>;
     create(dto: CreateCompanyDto): import("../../generated/prisma/models").Prisma__CompanyClient<{
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
     }, never, import("@prisma/client/runtime/client").DefaultArgs, {
         omit: import("../../generated/prisma/internal/prismaNamespace").GlobalOmitConfig | undefined;
     }>;
     update(id: string, dto: UpdateCompanyDto, user: AuthUser): Promise<{
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
     }>;
 }

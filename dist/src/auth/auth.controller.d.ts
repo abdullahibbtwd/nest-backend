@@ -29,8 +29,8 @@ export declare class AuthController {
     }>;
     getProfile(user: AuthUser): Promise<{
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
         email: string;
         role: import("../../generated/prisma/enums").Role;
         companyId: string | null;

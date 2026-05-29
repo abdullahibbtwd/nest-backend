@@ -11,11 +11,11 @@ export declare class AuditController {
         };
     } & {
         id: string;
+        createdAt: Date;
+        userId: string;
         action: string;
         entity: string;
         entityId: string;
         metadata: import("@prisma/client/runtime/client").JsonValue | null;
-        createdAt: Date;
-        userId: string;
     })[]>;
 }
