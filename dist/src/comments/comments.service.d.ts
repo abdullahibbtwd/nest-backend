@@ -1,0 +1,42 @@
+import { AuthUser } from '../auth/interfaces/auth-user.interface';
+import { AuditService } from '../audit/audit.service';
+import { PrismaService } from '../database/prisma.service';
+import { CreateCommentDto } from './dto/create-comment.dto';
+export declare class CommentsService {
+    private readonly prisma;
+    private readonly audit;
+    constructor(prisma: PrismaService, audit: AuditService);
+    findByTicket(ticketId: string, user: AuthUser): Promise<({
+        author: {
+            id: string;
+            createdAt: Date;
+            name: string;
+            email: string;
+            role: import("../../generated/prisma/enums").Role;
+            companyId: string | null;
+        };
+    } & {
+        id: string;
+        createdAt: Date;
+        message: string;
+        ticketId: string;
+        authorId: string;
+    })[]>;
+    create(ticketId: string, dto: CreateCommentDto, user: AuthUser): Promise<{
+        author: {
+            id: string;
+            createdAt: Date;
+            name: string;
+            email: string;
+            role: import("../../generated/prisma/enums").Role;
+            companyId: string | null;
+        };
+    } & {
+        id: string;
+        createdAt: Date;
+        message: string;
+        ticketId: string;
+        authorId: string;
+    }>;
+    private assertTicketAccess;
+}
