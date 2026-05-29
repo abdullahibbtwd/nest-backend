@@ -4,7 +4,7 @@ REST API for the multi-tenant helpdesk platform.
 
 ## Live URL
 
-- API Base: https://yourapp.railway.app/api
+- API Base: https://yourapp.onrender.com/api (or Railway URL + `/api`)
 
 ## Test Accounts
 
@@ -106,11 +106,13 @@ npm run start:dev
 
 ---
 
-## Production Deploy (Railway)
+## Production Deploy (Render)
+
+This monorepo includes **`render.yaml`** at the repo root. Connect the GitHub repo in Render → **Blueprint** → **Apply**, then set `DATABASE_URL`, `DIRECT_URL`, `JWT_SECRET`, and `FRONTEND_URL` in the dashboard.
 
 ```bash
 npm run build:prod
 npm run start:prod  # runs migrations automatically
 ```
 
-See [DEPLOY.md](../DEPLOY.md) for full Railway + Vercel steps.
+See [DEPLOY.md](../DEPLOY.md) for Render, Railway, and Vercel steps.
